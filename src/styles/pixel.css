@@ -1,0 +1,176 @@
+/* Pixel Art Game Aesthetic Styles */
+
+.pixel-art {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Game-like background patterns */
+.pixel-bg-forest {
+  background-image: 
+    radial-gradient(circle at 25% 25%, #2d5016 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #1a3009 1px, transparent 1px),
+    linear-gradient(45deg, #3a6b1f 25%, transparent 25%),
+    linear-gradient(-45deg, #2d5016 25%, transparent 25%);
+  background-size: 40px 40px, 30px 30px, 20px 20px, 20px 20px;
+  background-position: 0 0, 15px 15px, 0 0, 10px 10px;
+}
+
+.pixel-bg-urban {
+  background-image: 
+    linear-gradient(90deg, #8b4513 1px, transparent 1px),
+    linear-gradient(180deg, #a0522d 1px, transparent 1px),
+    linear-gradient(90deg, #cd853f 2px, transparent 2px),
+    linear-gradient(180deg, #deb887 2px, transparent 2px);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  background-color: #d2691e;
+}
+
+/* Retro UI Elements */
+.pixel-panel {
+  background: linear-gradient(135deg, #F4EBD0 0%, #ebe0c8 100%);
+  border: 4px solid #122620;
+  box-shadow: 
+    inset 2px 2px 0px #fefdfb,
+    inset -2px -2px 0px #B68D40,
+    4px 4px 0px #122620;
+}
+
+.pixel-speech-bubble {
+  position: relative;
+  font-family: 'Courier New', monospace;
+}
+
+.pixel-button {
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 
+    inset 2px 2px 0px rgba(255,255,255,0.3),
+    inset -2px -2px 0px rgba(0,0,0,0.3),
+    2px 2px 0px #000;
+}
+
+.pixel-button:active {
+  box-shadow: 
+    inset 2px 2px 0px rgba(0,0,0,0.3),
+    inset -2px -2px 0px rgba(255,255,255,0.1);
+}
+
+/* Retro text styles */
+.pixel-text {
+  font-family: 'Courier New', monospace;
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 1px;
+}
+
+.pixel-title {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    2px 2px 0px #000,
+    4px 4px 0px rgba(0,0,0,0.3);
+}
+
+/* Quest UI Elements */
+.quest-notification {
+  background: linear-gradient(45deg, #D6AD60 0%, #f2d588 50%, #D6AD60 100%);
+  border: 3px solid #876d3d;
+  box-shadow: 
+    0 0 10px rgba(214, 173, 96, 0.5),
+    inset 2px 2px 0px rgba(255,255,255,0.3);
+  animation: questGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes questGlow {
+  from { box-shadow: 0 0 10px rgba(214, 173, 96, 0.5); }
+  to { box-shadow: 0 0 20px rgba(214, 173, 96, 0.8); }
+}
+
+/* Retro input styling */
+.pixel-input {
+  font-family: 'Courier New', monospace;
+  background: #F4EBD0;
+  border: 3px solid #122620;
+  box-shadow: 
+    inset 2px 2px 0px #ebe0c8,
+    inset -2px -2px 0px #fefdfb;
+}
+
+.pixel-input:focus {
+  outline: none;
+  box-shadow: 
+    inset 2px 2px 0px #B68D40,
+    inset -2px -2px 0px #fefdfb,
+    0 0 0 3px #D6AD60;
+}
+
+/* Character animation keyframes */
+@keyframes characterBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.character-animate {
+  animation: characterBob 2s ease-in-out infinite;
+}
+
+/* Retro scrollbar */
+.pixel-scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+
+.pixel-scrollbar::-webkit-scrollbar-track {
+  background: #F4EBD0;
+  border: 2px solid #122620;
+}
+
+.pixel-scrollbar::-webkit-scrollbar-thumb {
+  background: #B68D40;
+  border: 2px solid #122620;
+}
+
+.pixel-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8b6830;
+}
+
+/* Game-style notifications */
+.achievement-popup {
+  background: linear-gradient(45deg, #D6AD60 0%, #B68D40 100%);
+  border: 4px solid #8b6830;
+  color: #122620;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: achievementSlide 0.5s ease-out;
+}
+
+@keyframes achievementSlide {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Pixel art shadows and depth */
+.pixel-shadow {
+  box-shadow: 
+    4px 4px 0px #122620,
+    8px 8px 0px rgba(18, 38, 32, 0.3);
+}
+
+.pixel-inset {
+  box-shadow: 
+    inset 2px 2px 0px rgba(0,0,0,0.3),
+    inset -2px -2px 0px rgba(255,255,255,0.3);
+}
+
+
